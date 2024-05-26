@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #F77F00;
+    --brown: #BD6E1A;
+    --blue: #0D3B66;
+    --beige: #FAF0CA;
+    --title-font: "Irish Grover", system-ui;
+    --main-font: "Kadwa", serif;
+
+}
+
+body {
+    background-color: var(--beige);
+    font-family: var(--main-font);
+
+}
+
+
+header {
+    background-color: var(--brown);
+    font-family: var(--title-font);
+    display: flex;
+    color: var(--beige);
+}
+
+header>a {
+    color: var(--beige);
+    width: 3rem;
+}
+
+
+
+
+button {
+    background-color: var(--blue);
+    font-family: var(--title-font);
+}
