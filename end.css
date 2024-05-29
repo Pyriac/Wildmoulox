@@ -24,6 +24,11 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+}
+
+
 /* GLOBAL RULES END */
 
 /* MOBILE RULES */
@@ -34,7 +39,7 @@ header {
     background-color: var(--brown);
     font-family: var(--title-font);
     display: flex;
-    width: 100vw;
+    width: 100svw;
     justify-content: space-between;
     align-items: center;
     color: var(--beige);
@@ -89,6 +94,10 @@ h2 {
     text-shadow: 0.15rem 0.25rem 0.25rem rgba(0, 0, 0, .4);
 }
 
+.desktop {
+    display: none;
+}
+
 /* RESULTS SECTION END*/
 
 /* BAD ANSWER SECTION*/
@@ -124,16 +133,136 @@ button {
     box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4)
 }
 
+.disapear {
+    display: none;
+}
+
+.bi-arrow-right-circle-fill {
+    display: none;
+}
+
 
 
 
 /* MOBILE RULES END*/
 
 
+/* DESKTOP RULES */
+
 @media screen and (min-width:920px) {
+
+    /* HEADER RULES */
+
     header svg {
         fill: var(--beige);
-        height: 10svw;
+        height: 3rem;
         display: flex;
     }
+
+    .bi-house-door-fill {
+        padding-left: 1rem;
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .bi-list {
+        padding-right: 1rem;
+    }
+
+    header {
+        margin: 0;
+        height: 130px;
+    }
+
+    .bi-arrow-right-circle-fill {
+        display: none;
+    }
+
+    /* END HEADER RULES */
+
+
+    /* BODY RULES */
+
+    .results {
+
+        margin-top: 10svh;
+        width: 616px;
+        height: 335px;
+        border-radius: 2rem 2rem 2rem 2rem;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    h2 {
+        padding-top: 2rem;
+    }
+
+    .variable {
+        padding: 0rem;
+        font-size: 3rem;
+        margin: 0rem;
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+    .nombre-mauvaises-rep {
+        background: rgb(247, 127, 0);
+        background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 80%);
+        width: 157px;
+        height: 147px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10rem 10rem 10rem 10rem;
+    }
+
+
+
+    .bad-answer p {
+        width: 616px;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: var(--blue);
+        padding: 0;
+        font-weight: 300;
+    }
+
+    button {
+        width: 616px;
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .disapear {
+        display: flex;
+        width: 65px;
+        height: 65px;
+        fill: var(--blue);
+
+
+    }
+
+    .bi-arrow-right-circle-fill {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        fill: var(--blue);
+        background-color: var(--orange);
+        outline: 1px solid #0D3B66;
+        border-radius: 10rem 10rem 10rem 10rem;
+    }
+
+    /* END BODY RULES */
+
 }
+
+/* END DESKTOP RULES */
