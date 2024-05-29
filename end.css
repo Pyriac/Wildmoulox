@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+button {
+    all: unset;
+
+}
+
 :root {
     --orange: #F77F00;
     --brown: #BD6E1A;
@@ -44,16 +49,21 @@ header {
     align-items: center;
     color: var(--beige);
     font-size: 1rem;
-    height: 10svh;
     box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, .2);
     position: relative;
     z-index: 1;
 
 }
 
+h1 {
+    padding: 0.5rem;
+    letter-spacing: 0.2rem
+}
+
+;
+
 header svg {
     fill: var(--beige);
-    height: 10svw;
     display: none;
 }
 
@@ -68,10 +78,13 @@ main {
 
 /* RESULTS SECTION */
 
+body {
+    height: 100svh;
+}
+
 .results {
     background-color: var(--orange);
-    width: 57svw;
-    height: 41svh;
+    width: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,10 +92,14 @@ main {
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, .2);
     color: var(--blue);
     font-size: 1.5rem;
+    padding-bottom: 3vh;
+}
+
+p {
+    padding: 1rem;
 }
 
 h2 {
-    padding-top: 5svh;
     font-size: 1.5rem;
     color: var(--blue);
 }
@@ -90,7 +107,7 @@ h2 {
 .variable {
     font-size: 3rem;
     font-weight: 600;
-    padding-top: 4svh;
+    padding-top: 2rem;
     text-shadow: 0.15rem 0.25rem 0.25rem rgba(0, 0, 0, .4);
 }
 
@@ -105,11 +122,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5svw;
+    margin: 5svh 5svw;
 }
 
 .bad-answer h2 {
-    padding: 3svh 0;
+    padding: 1rem 0;
     font-size: 1.5rem;
 }
 
@@ -117,7 +134,7 @@ h2 {
     font-size: 1rem;
     font-style: italic;
     color: var(--blue);
-    padding: 2dvh 5svw;
+    padding: 1rem 2rem;
 }
 
 /* BAD ANSWER SECTION END*/
@@ -128,16 +145,18 @@ button {
     color: var(--orange);
     font-size: 2rem;
     width: 65svw;
-    height: 10svh;
     border-radius: 5rem 5rem 5rem 5rem;
-    box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4)
+    box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
 }
 
 .disapear {
     display: none;
 }
 
-.bi-arrow-right-circle-fill {
+.bi-arrow-right-short {
     display: none;
 }
 
@@ -155,7 +174,7 @@ button {
 
     header svg {
         fill: var(--beige);
-        height: 3rem;
+        width: 3rem;
         display: flex;
     }
 
@@ -174,11 +193,6 @@ button {
 
     header {
         margin: 0;
-        height: 130px;
-    }
-
-    .bi-arrow-right-circle-fill {
-        display: none;
     }
 
     /* END HEADER RULES */
@@ -190,7 +204,6 @@ button {
 
         margin-top: 10svh;
         width: 616px;
-        height: 335px;
         border-radius: 2rem 2rem 2rem 2rem;
     }
 
@@ -203,10 +216,17 @@ button {
     }
 
     .variable {
-        padding: 0rem;
+        padding: 0;
+        padding-top: 2rem;
         font-size: 3rem;
         margin: 0rem;
     }
+
+    .sur30 {
+        padding: 0;
+    }
+
+
 
     .desktop {
         display: flex;
@@ -216,7 +236,6 @@ button {
         background: rgb(247, 127, 0);
         background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 80%);
         width: 157px;
-        height: 147px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -236,7 +255,6 @@ button {
 
     button {
         width: 616px;
-        height: 65px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -245,20 +263,15 @@ button {
     .disapear {
         display: flex;
         width: 65px;
-        height: 65px;
         fill: var(--blue);
 
 
     }
 
-    .bi-arrow-right-circle-fill {
+    .bi-arrow-right-short {
         display: flex;
         width: 60px;
-        height: 60px;
-        fill: var(--blue);
-        background-color: var(--orange);
-        outline: 1px solid #0D3B66;
-        border-radius: 10rem 10rem 10rem 10rem;
+        fill: var(--orange);
     }
 
     /* END BODY RULES */
