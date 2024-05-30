@@ -25,13 +25,20 @@ button {
 body {
     background-color: var(--beige);
     font-family: var(--main-font);
-}
-
-.main {
+    width: 100vw;
+    height: 100svh;
     display: flex;
     flex-direction: column;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding-inline: 1rem;
+    flex: 1;
 }
 
 /* #endregion */
