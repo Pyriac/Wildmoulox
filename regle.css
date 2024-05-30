@@ -1,0 +1,206 @@
+/* GLOBAL RULES */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #F77F00;
+    --brown: #BD6E1A;
+    --blue: #0D3B66;
+    --beige: #FAF0CA;
+    --title-font: "Irish Grover", system-ui;
+    --main-font: "Kadwa", serif;
+
+}
+
+body {
+    background-color: var(--beige);
+    font-family: var(--main-font);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* GLOBAL RULES END */
+
+/* MOBILE RULES */
+
+/* HEADER */
+
+header {
+    background-color: var(--brown);
+    font-family: var(--title-font);
+    display: flex;
+    width: 100svw;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--beige);
+    font-size: 1rem;
+    height: 10svh;
+    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, .2);
+    position: relative;
+    z-index: 1;
+
+}
+
+header svg {
+    fill: var(--beige);
+    height: 10svw;
+    display: flex;
+    transition: 0.2s
+}
+  
+header svg:hover {
+   transform: scale(1.5);
+  }
+
+/* HEADER END*/
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RECTANGLE SECTION */
+
+h2 {
+    color: #0D3B66;
+}
+
+.rectangle {
+    background-color: var(--orange);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0.3rem;
+    font-size:larger;
+}
+
+.pf {
+    color: #0D3B66;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.pf > p {
+    padding: 0.7rem;
+    width: 25ch;
+}
+
+button {
+    background-color: var(--blue);
+    font-family: var(--title-font);
+    color: var(--orange);
+    font-size: 2rem;
+    width: 65svw;
+    height: 10svh;
+    border-radius: 5rem 5rem 5rem 5rem;
+    box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4);
+    transition: 0.2s
+}
+
+button:hover {
+    transform: scale(1.5);
+   }
+
+.disapear {
+    display: none;
+}
+
+.bi-arrow-right-circle-fill {
+    display: none;
+}
+
+.welcolme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* MOBILE RULES END*/
+
+
+/* DESKTOP RULES */
+
+@media screen and (min-width:920px) {
+
+    /* HEADER RULES */
+
+    header svg {
+        fill: var(--beige);
+        height: 3rem;
+        display: flex;
+    }
+
+    .bi-house-door-fill {
+        padding-left: 1rem;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .bi-list {
+        padding-right: 1rem;
+    }
+
+    header {
+        margin: 0;
+        height: 130px;
+    }
+
+    .bi-arrow-right-circle-fill {
+        display: none;
+    }
+
+    /* END HEADER RULES */
+
+    /* BODY RULES */
+
+    .rectangle {
+        background-color: var(--orange);
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        margin: 2rem;
+        padding: 1rem;
+        font-size:larger;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .pf > p {
+        width: 39ch;
+        font-size: 2rem;
+    }
+    
+   
+     /* END BODY RULES */
+
+}
+
+/* END DESKTOP RULES */
