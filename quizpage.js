@@ -37,9 +37,4 @@ const questions = [
         question: "Ouais ouais ouais !",
         Answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"]
     },
-
-
-
-
-
 ]
