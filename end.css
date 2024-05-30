@@ -1,3 +1,4 @@
+/* GLOBAL RULES */
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
 
 
@@ -5,6 +6,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button {
+    all: unset;
+
 }
 
 :root {
@@ -23,23 +29,257 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+}
+
+
+/* GLOBAL RULES END */
+
+/* MOBILE RULES */
+
+/* HEADER */
 
 header {
     background-color: var(--brown);
     font-family: var(--title-font);
     display: flex;
+    width: 100svw;
+    justify-content: space-between;
+    align-items: center;
     color: var(--beige);
+    font-size: 1rem;
+    box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, .2);
+    position: relative;
+    z-index: 1;
+
 }
 
-header>a {
-    color: var(--beige);
-    width: 3rem;
+h1 {
+    padding: 0.5rem;
+    letter-spacing: 0.2rem
 }
 
+;
 
+header svg {
+    fill: var(--beige);
+    display: none;
+}
 
+/* HEADER END*/
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RESULTS SECTION */
+
+body {
+    height: 100svh;
+}
+
+.results {
+    background-color: var(--orange);
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 100rem 100rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, .2);
+    color: var(--blue);
+    font-size: 1.5rem;
+    padding-bottom: 3vh;
+}
+
+p {
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.variable {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 2rem;
+    text-shadow: 0.15rem 0.25rem 0.25rem rgba(0, 0, 0, .4);
+}
+
+.desktop {
+    display: none;
+}
+
+/* RESULTS SECTION END*/
+
+/* BAD ANSWER SECTION*/
+.bad-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5svh 5svw;
+}
+
+.bad-answer h2 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.bad-answer p {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--blue);
+    padding: 1rem 2rem;
+}
+
+/* BAD ANSWER SECTION END*/
 
 button {
     background-color: var(--blue);
     font-family: var(--title-font);
+    color: var(--orange);
+    font-size: 2rem;
+    width: 65svw;
+    border-radius: 5rem 5rem 5rem 5rem;
+    box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
 }
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.disapear {
+    display: none;
+}
+
+.bi-arrow-right-short {
+    display: none;
+}
+
+
+
+
+/* MOBILE RULES END*/
+
+
+/* DESKTOP RULES */
+
+@media screen and (min-width:920px) {
+
+    /* HEADER RULES */
+
+    header svg {
+        fill: var(--beige);
+        width: 3rem;
+        display: flex;
+    }
+
+    .bi-house-door-fill {
+        padding-left: 1rem;
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .bi-list {
+        padding-right: 1rem;
+    }
+
+    header {
+        margin: 0;
+    }
+
+    /* END HEADER RULES */
+
+
+    /* BODY RULES */
+
+    .results {
+
+        margin-top: 10svh;
+        width: 616px;
+        border-radius: 2rem 2rem 2rem 2rem;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    h2 {
+        padding-top: 2rem;
+    }
+
+    .variable {
+        padding: 0;
+        padding-top: 2rem;
+        font-size: 3rem;
+        margin: 0rem;
+    }
+
+    .sur30 {
+        padding: 0;
+    }
+
+
+
+    .desktop {
+        display: flex;
+    }
+
+    .nombre-mauvaises-rep {
+        background: rgb(247, 127, 0);
+        background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 80%);
+        width: 157px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10rem 10rem 10rem 10rem;
+    }
+
+
+
+    .bad-answer p {
+        width: 616px;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: var(--blue);
+        padding: 0;
+        font-weight: 300;
+    }
+
+    button {
+        width: 616px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .disapear {
+        display: flex;
+        width: 65px;
+        fill: var(--blue);
+
+
+    }
+
+    .bi-arrow-right-short {
+        display: flex;
+        width: 60px;
+        fill: var(--orange);
+    }
+
+    /* END BODY RULES */
+
+}
+
+/* END DESKTOP RULES */
