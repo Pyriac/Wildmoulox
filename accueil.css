@@ -16,73 +16,114 @@
 
 }
 
+/* BODY */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 /* HEADER */
 
 header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1rem;
     background-color: var(--brown);
+}
+
+header h1 {
     font-family: var(--title-font);
     text-transform: uppercase;
-    text-align: center;
     color: var(--beige);
-    height: 4rem;
-    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+
 }
 
 /* MAIN */
 
 main {
-    background-color: var(--beige);
+    flex: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    max-width: 360px;
+    justify-content: center;
+    background-color: var(--beige);
 }
-
-div {
-    display: grid;
-    grid-template-columns: repeat(5, 4rem);
-    grid-template-rows: repeat(5, 4rem);
-    gap: 0.4rem;
-    max-width: 360px;
-    width: 100%;
-
-}
-
-/* GRID */
 
 .grid {
-    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    margin: 0 .7rem;
+}
+
+.section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--title-font);
-    text-transform: uppercase;
-    border: solid .4rem red;
-    width: 4.9rem;
-    height: 4.9rem;
+    border: 0.2rem solid red;
+    background-color: white;
 }
 
-.beige {
+.imgBeige {
     background-color: var(--beige);
 }
 
-img {
-    width: 4.1rem;
-    height: 4.1rem;
-}
+.section img {
 
-a {
-    text-decoration: none;
     width: 100%;
     height: 100%;
+}
+
+.section p {
+    margin: 0;
+    text-align: center;
+}
+
+/* LINKS */
+
+.section a {
+    text-decoration: none;
+    color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
-a:hover {
+.grid a:hover {
     background-color: var(--orange);
     color: var(--beige);
     transform: scale(1.1);
+}
+
+.grid a:visited {
+    color: black;
+}
+
+/* VERSION DESKTOP */
+
+@media screen and (min-width: 992px) {
+
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        max-height: 80px;
+    }
+
+    .grid {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        max-width: 720px;
+    }
+
+    .section {
+        max-width: 110px;
+        max-height: 110px;
+    }
 }
