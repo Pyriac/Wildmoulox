@@ -1,5 +1,5 @@
 
-1) "quelle est la réponse à "ça va être tout noir" ?
+1) Quelle est la réponse à "ça va être tout noir" ?
 
 A - Non
 B - Attends un peu !
@@ -58,7 +58,7 @@ D - Pas besoin d'études pour être connu finalement
 A - Ouais ouais ouais
 B - Non non non
 C - peut-être
-D - la réponse D
+D - C'est validé !
 
 
 
