@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #F77F00;
+    --brown: #BD6E1A;
+    --blue: #0D3B66;
+    --beige: #FAF0CA;
+    --title-font: "Irish Grover", system-ui;
+    --main-font: "Kadwa", serif;
+
+}
+
+/* BODY */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    background-color: var(--brown);
+}
+
+header h1 {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    color: var(--beige);
+    letter-spacing: 0.1rem;
+
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--beige);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    margin: 0 .7rem;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid red;
+    background-color: white;
+}
+
+.imgBeige {
+    background-color: var(--beige);
+}
+
+.section img {
+
+    width: 100%;
+    height: 100%;
+}
+
+.section p {
+    margin: 0;
+    text-align: center;
+}
+
+/* LINKS */
+
+.section a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.grid a:hover {
+    background-color: var(--orange);
+    color: var(--beige);
+    transform: scale(1.1);
+}
+
+.grid a:visited {
+    color: black;
+}
+
+/* VERSION DESKTOP */
+
+@media screen and (min-width: 992px) {
+
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        max-height: 80px;
+    }
+
+    .grid {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        max-width: 720px;
+    }
+
+    .section {
+        max-width: 110px;
+        max-height: 110px;
+    }
+}
