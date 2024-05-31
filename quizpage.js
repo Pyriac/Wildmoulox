@@ -1,4 +1,4 @@
-const questions = [
+const listQuestions = [
     {
         question: 'Quelle est la réponse à "ça va être tout noir" ?',
         Answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
@@ -49,21 +49,48 @@ const questions = [
 ]
 
 
-// ----------Idées :
-// Ne pas réutiliser une question déjà posée dans un quizz >> Regarder filter pour voir si ça peut être utile pour trier
-// Max caractères question avec image = 93 ch   &&   Max caractères réponse avec image = 64 ch
-// Mouseover réponses : légère surbrillance (ou autre)   &&   Cursor différent
+// ----------A faire :
+// Faire en sorte que les questions soit choisies aléatoirement
+// Faire en sorte que les réponses soit positionnées aléatoirement (tout en gardant la trace de la bonne réponse)
+// Max caractères questionImage = 93 ch 
+// Max caractères réponseImage = 64 ch
 
-
-// Essai de boucle for each pour créer les questions
-// function createQuestion(listeDesQuestions) {
-//     listeDesQuestions.forEach((question) => {
-//         const question = document.querySelector(".question");
-//         const reponses = document.querySelectorAll(".reponse");
-//     })
+// -------Randomizer et test pour ne pas réutiliser la même question
+// const usedQuestions = [];
+// let randomIndex;
+// while (randomIndex.includes(usedQuestions)) {
+//     let randomIndex = Math.floor(Math.random() * listQuestions.length);
 // }
+// usedQuestions.push(randomIndex);
 
-// Essai de création de question
+
+// Choisis l'index de la question
+const testIndex = 2;
+
+// Regarde si c'est une question à image ou non, et si oui, récupère l'img dans le tableau
+if (listQuestions[testIndex].image !== undefined && imageTableau !== null) {
+    const imageTableau = document.querySelector(".image");
+    imageTableau.src = listQuestions[testIndex].image;
+};
+
+// Créé la question
 const question = document.querySelector(".question");
-const reponses = document.querySelectorAll(".reponse");
+question.textContent = listQuestions[testIndex].question;
 
+// Créé les réponses
+const reponses = document.querySelectorAll(".reponse");
+listQuestions[testIndex].answers.forEach((answer, index) => {
+    reponses[index].textContent = answer;
+});
+
+// Quand on clique sur réponse
+reponses.addEventListener("click", () => {
+    if (listQuestions[testIndex].image === undefined
+    ) {
+        window.open("quizzpage.html");
+    } else {
+        window.open("quizzpageimg.html");
+        const image = document.querySelector(".image");
+        image.src = listQuestions.image;
+    }
+});
