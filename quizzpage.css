@@ -54,6 +54,10 @@ main {
 
 }
 
+.bi-house-door-fill:hover {
+    transform: scale(1.2);
+}
+
 .navbar svg {
     fill: var(--beige);
 }
@@ -118,6 +122,7 @@ main {
     align-content: center;
     align-items: center;
     border: none;
+    text-decoration: none;
 }
 
 .reponse:hover {
