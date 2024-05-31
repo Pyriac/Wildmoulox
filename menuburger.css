@@ -1,0 +1,66 @@
+/* GLOBAL RULES */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #F77F00;
+    --brown: #BD6E1A;
+    --blue: #0D3B66;
+    --beige: #FAF0CA;
+    --title-font: "Irish Grover", system-ui;
+    --main-font: "Kadwa", serif;
+
+}
+
+body {
+    background-color: var(--beige);
+    font-family: var(--main-font);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* GLOBAL RULES END */
+
+/* MOBILE RULES */
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #0D3B66;
+    width: 5ch;
+}
+
+.bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bi-soundwave {
+    width: 10%;
+    display: flex;
+    justify-content: left;
+}
+
+.bi-music-note {
+    width: 10%;
+}
+
+/* MOBILE RULES END*/
