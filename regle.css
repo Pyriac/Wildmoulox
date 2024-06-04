@@ -26,6 +26,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #F77F00;
 }
 
 
@@ -49,6 +50,11 @@ header {
     position: relative;
     z-index: 1;
 
+}
+
+
+h1 {
+    letter-spacing: 0.1rem
 }
 
 header svg {
@@ -89,7 +95,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    margin: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     padding: 0.3rem;
     font-size:larger;
 }
@@ -112,7 +119,7 @@ h2 {
 button {
     background-color: var(--blue);
     font-family: var(--title-font);
-    color: var(--orange);
+    color: #F77F00;
     font-size: 2rem;
     width: 65svw;
     max-width: 250px;
@@ -184,16 +191,21 @@ button:hover {
 
     .rectangle {
         background-color: var(--orange);
-        width: 45%;
-        max-width: 850px;
+        width: 85%;
+        max-width: 650px;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 1rem;
-        margin: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
         padding: 1rem;
         font-size:larger;
         
+    }
+
+    h1 {
+        letter-spacing: 0.2rem
     }
 
     h2 {
@@ -212,6 +224,7 @@ button:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 4.5rem;
     }
 
     .disapear {
