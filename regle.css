@@ -26,6 +26,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #F77F00;
 }
 
 
@@ -44,23 +45,30 @@ header {
     align-items: center;
     color: var(--beige);
     font-size: 1rem;
-    height: 10svh;
+    height: 8svh;
     box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, .2);
     position: relative;
     z-index: 1;
 
 }
 
+
+h1 {
+    letter-spacing: 0.1rem
+}
+
 header svg {
     fill: var(--beige);
     height: 10svw;
     display: flex;
-    transition: 0.2s
+    transition: 0.2s;
+    margin: 10px;
 }
   
 header svg:hover {
    transform: scale(1.5);
   }
+  
 
 /* HEADER END*/
 
@@ -82,11 +90,13 @@ h2 {
 .rectangle {
     background-color: var(--orange);
     width: 90%;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    margin: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     padding: 0.3rem;
     font-size:larger;
 }
@@ -95,7 +105,6 @@ h2 {
     color: #0D3B66;
     display: flex;
     justify-content: left;
-    padding-bottom: 5rem;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -104,37 +113,42 @@ h2 {
 .pf > p {
     padding: 0.7rem;
     width: 25ch;
+   
 }
 
 button {
     background-color: var(--blue);
     font-family: var(--title-font);
-    color: var(--orange);
+    color: #F77F00;
     font-size: 2rem;
     width: 65svw;
-    height: 10svh;
+    max-width: 250px;
     border-radius: 5rem 5rem 5rem 5rem;
     box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4);
-    transition: 0.2s
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
 
 button:hover {
-    transform: scale(1.5);
-   }
+    transform: scale(1.2);
+}
 
 .disapear {
     display: none;
 }
 
-.bi-arrow-right-circle-fill {
+.bi-arrow-right-short {
     display: none;
 }
-
 .welcolme {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
 }
+
 
 /* MOBILE RULES END*/
 
@@ -144,6 +158,11 @@ button:hover {
 @media screen and (min-width:920px) {
 
     /* HEADER RULES */
+
+    header {
+        margin: 0;
+       height: 90px;
+    }
 
     header svg {
         fill: var(--beige);
@@ -164,14 +183,7 @@ button:hover {
         padding-right: 1rem;
     }
 
-    header {
-        margin: 0;
-        height: 130px;
-    }
 
-    .bi-arrow-right-circle-fill {
-        display: none;
-    }
 
     /* END HEADER RULES */
 
@@ -179,14 +191,21 @@ button:hover {
 
     .rectangle {
         background-color: var(--orange);
-        width: 95%;
+        width: 85%;
+        max-width: 650px;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 1rem;
-        margin: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
         padding: 1rem;
         font-size:larger;
+        
+    }
+
+    h1 {
+        letter-spacing: 0.2rem
     }
 
     h2 {
@@ -196,6 +215,30 @@ button:hover {
     .pf > p {
         width: 39ch;
         font-size: 2rem;
+        margin: 1rem
+    }
+
+    button {
+        width: 616px;
+        max-width: 850px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4.5rem;
+    }
+
+    .disapear {
+        display: flex;
+        width: 65px;
+        fill: var(--blue);
+
+
+    }
+
+    .bi-arrow-right-short {
+        display: flex;
+        width: 60px;
+        fill: var(--orange);
     }
     
    

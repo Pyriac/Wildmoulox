@@ -1,0 +1,202 @@
+/* GLOBAL RULES */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Kadwa:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+}
+
+:root {
+    --orange: #F77F00;
+    --brown: hsl(31, 76%, 42%);
+    --blue: #0D3B66;
+    --beige: #FAF0CA;
+    --title-font: "Irish Grover", system-ui;
+    --main-font: "Kadwa", serif;
+
+}
+
+
+
+#popup-overlay {
+    font-family: var(--main-font);
+    width: 100vw;
+    display: none;
+    z-index: 99;
+}
+
+#popup-overlay.open {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    display: flex;
+}
+
+
+/* GLOBAL RULES END */
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+
+    max-width: 400px;
+    max-height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--beige);
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.title-popup {
+    font-family: var(--title-font);
+    font-weight: 300;
+}
+
+.music-play {
+    background-color: var(--blue);
+    color: var(--orange);
+    font-family: var(--title-font);
+    font-size: 2rem;
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, .2);
+}
+
+.music-play:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+
+.title-popup {
+    color: var(--blue);
+    font-size: 2rem;
+    padding-bottom: 5%;
+    text-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, .2);
+}
+
+#volume {
+    margin-bottom: 20%;
+}
+
+.music-stop {
+    background-color: var(--blue);
+    color: var(--orange);
+    font-family: var(--title-font);
+    font-size: 2rem;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, .2);
+}
+
+.music-stop:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.5rem;
+    background: -webkit-linear-gradient(left,
+            var(--orange) 0%,
+            var(--brown) 50%,
+            var(--orange) 100%);
+    border-radius: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 3px solid var(--blue);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    bottom: 4px;
+    background: var(--beige);
+    background-size: 50%;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    scale: 1.25;
+}
+
+.popup-close {
+    font-family: var(--title-font);
+    position: absolute;
+    top: 0%;
+    right: 4%;
+    font-size: 2.5rem;
+    background-color: none;
+    color: var(--blue);
+    text-shadow: 0.15rem 0.25rem 0.25rem rgba(0, 0, 0, .4);
+}
+
+.popup-close:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+
+
+/* MOBILE RULES */
+
+@media (max-width:920px) {
+
+    .popup-close {
+        font-size: 1.5rem;
+    }
+
+    .music-stop {
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    .music-play {
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    .title-popup {
+        font-size: 1.5rem;
+    }
+
+    .popup-content {
+        width: 65vw;
+        max-width: 300px;
+        max-height: 400px;
+    }
+}
