@@ -62,6 +62,11 @@ main {
     margin: 0 .7rem;
 }
 
+.grid.open {
+    z-index: 99;
+    filter: blur(10px);
+}
+
 .section {
     display: flex;
     align-items: center;

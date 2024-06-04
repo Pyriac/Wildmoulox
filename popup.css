@@ -22,9 +22,7 @@ button {
 
 }
 
-body {
-    z-index: 2;
-}
+
 
 #popup-overlay {
     font-family: var(--main-font);
@@ -35,7 +33,12 @@ body {
 
 #popup-overlay.open {
     display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    display: flex;
 }
+
 
 /* GLOBAL RULES END */
 
@@ -167,6 +170,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
     cursor: pointer;
 }
 
+
+
 /* MOBILE RULES */
 
 @media (max-width:920px) {
@@ -194,12 +199,4 @@ input[type="range"]::-webkit-slider-thumb:hover {
         max-width: 300px;
         max-height: 400px;
     }
-
-    #popup-overlay.open {
-        position: absolute;
-        top: 50%;
-        left: 0%;
-        display: flex;
-    }
-
 }
