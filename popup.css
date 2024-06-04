@@ -29,9 +29,8 @@ body {
 #popup-overlay {
     font-family: var(--main-font);
     width: 100vw;
-
     display: none;
-    z-index: 1;
+    z-index: 99;
 }
 
 #popup-overlay.open {
@@ -171,6 +170,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* MOBILE RULES */
 
 @media (max-width:920px) {
+
     .popup-close {
         font-size: 1.5rem;
     }
@@ -191,6 +191,15 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
     .popup-content {
         width: 65vw;
+        max-width: 300px;
+        max-height: 400px;
+    }
+
+    #popup-overlay.open {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        display: flex;
     }
 
 }

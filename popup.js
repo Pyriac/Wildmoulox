@@ -35,11 +35,11 @@ const playMusic = document.querySelector(".music-play");
 const stopMusic = document.querySelector(".music-stop");
 
 playMusic.addEventListener("click", () => {
-    console.log("click")
+    // console.log("click")
     backgroundMusic.play();
 });
 stopMusic.addEventListener("click", () => {
-    console.log("click")
+    // console.log("click")
     backgroundMusic.pause();
     backgroundMusic.load();
 });

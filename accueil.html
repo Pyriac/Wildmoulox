@@ -7,6 +7,7 @@
     <meta name="description" content="Quizz humoristique">
     <meta name="keywords" content="quiz, funny, comedy">
     <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" href="popup.css">
     <title>Wildmoulox</title>
 </head>
 
@@ -75,7 +76,23 @@
                     <img src="Images/parapluie.png" alt="Image d'un parapluie">
                 </section>
                 <section class="section">
-                    <a href="">options</a>
+                    <button class="popup">options</button>
+                    <!-- PARTIE POPUP -->
+                    <div id="popup-overlay">
+                        <div class="popup-content">
+                            <button class="music-play">PLAY</button>
+                            <div class="volume-controle">
+                                <H2 class="title-popup">AUDIO VOLUME</H2>
+                                <input type="range" id="volume" name="volume" min="0" max="0.8" step="0.01" value="1">
+
+                            </div>
+                            <button class="music-stop">STOP</button>
+
+                            <button class="popup-close">X</button>
+                        </div>
+                    </div>
+
+                    <audio class="background-music" src="background-music.mp3"></audio>
                 </section>
                 <section class="section">
                     <img src="Images/banane.png" alt="Image d'une banane">
@@ -102,6 +119,11 @@
                     avons découvert que la logique, c'est logique ! Abonne-toi pour plus d'infos incroyables!</p>
             </div> -->
         </div>
+
+
+        <!-- APPEL DES SCRIPTS -->
+
+        <script src="popup.js"></script>
     </main>
 
 
