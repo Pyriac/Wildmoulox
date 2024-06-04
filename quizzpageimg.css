@@ -102,7 +102,7 @@ main {
     margin-bottom: 1rem;
 }
 
-.image img {
+.image {
     max-height: 13.75rem;
     max-width: auto;
     padding: 0;
@@ -199,7 +199,7 @@ a {
         max-height: 100%;
     }
 
-    .image img {
+    .image {
         max-height: unset;
         max-width: unset;
         padding: 0;
