@@ -5,13 +5,17 @@ const appellePopUp = document.querySelector(".popup");
 const fermerPopUp = document.querySelector(".popup-close");
 
 appellePopUp.addEventListener("click", () => {
+    addBlur = document.querySelector(".grid")
     popup = document.querySelector("#popup-overlay");
     popup.classList.toggle("open");
+    addBlur.classList.toggle("open");
 });
 
 fermerPopUp.addEventListener("click", () => {
+    addBlur = document.querySelector(".grid")
     popup = document.querySelector("#popup-overlay");
     popup.classList.remove("open");
+    addBlur.classList.remove("open");
 });
 
 // fonction réglage du son
@@ -35,11 +39,11 @@ const playMusic = document.querySelector(".music-play");
 const stopMusic = document.querySelector(".music-stop");
 
 playMusic.addEventListener("click", () => {
-    console.log("click")
+    // console.log("click")
     backgroundMusic.play();
 });
 stopMusic.addEventListener("click", () => {
-    console.log("click")
+    // console.log("click")
     backgroundMusic.pause();
     backgroundMusic.load();
 });
