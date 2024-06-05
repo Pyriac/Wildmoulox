@@ -211,3 +211,26 @@ main {
         max-height: 110px;
     }
 }
+
+/* MOBILE RULES */
+
+@media (max-width:920px) {
+
+    .pop-up-lsv {
+        width: 65vw;
+        max-width: 300px;
+        max-height: 400px;
+    }
+
+    .pop-up-lsv h1 {
+        font-size: 1.09rem;
+    }
+
+    #paragraphBox {
+        font-size: 1.09rem;
+    }
+
+    .close-lsv {
+        font-size: 1.5rem;
+    }
+}
