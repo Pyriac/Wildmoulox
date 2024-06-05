@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildmoulox</title>
     <link rel="stylesheet" href="quizzpage.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
                         d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
                 </svg></a>
             <h1>WILDMOULOX</h1>
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="bi-list" viewBox="0 0 16 16">
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="popup" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg></a>
@@ -47,10 +48,29 @@
         </section>
 
 
+        <!-- PARTIE POPUP -->
+        <div id="popup-overlay">
+            <div class="popup-content">
+                <button class="music-play">PLAY</button>
+                <div class="volume-controle">
+                    <H2 class="title-popup">AUDIO VOLUME</H2>
+                    <input type="range" id="volume" name="volume" min="0" max="0.8" step="0.01" value="1">
+
+                </div>
+                <button class="music-stop">STOP</button>
+
+                <button class="popup-close">X</button>
+            </div>
+        </div>
+        <audio class="background-music" src="Fichier-audios/background-music.mp3"></audio>
+
+
+
     </main>
 
     <script src="quizpagev3.js">
     </script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
