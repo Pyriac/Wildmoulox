@@ -157,6 +157,28 @@ a {
 
 /* #endregion */
 
+/* Pop-up Answer */
+.answer-pop {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.answer-pop.open {
+    display: flex;
+    background-color: var(--beige);
+}
+
+.answer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.answer-value {
+    font-family: var(--title-font);
+}
+
 /* #region -------- Media query Header*/
 @media screen and (min-width: 992px) {
     .navbar h1 {
