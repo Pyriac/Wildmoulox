@@ -53,6 +53,11 @@ const questions = [
 
 ]
 
+
+//creating calling const
+const clickedAnswer = document.querySelectorAll(".reponse");
+const answerValue = document.querySelector(".answer-value");
+
 let userScore = parseInt(localStorage.getItem("score")) || 0;
 let randomIndex = parseInt(localStorage.getItem("randomIndex"));
 const usedIndex = JSON.parse(localStorage.getItem("usedIndex")) || [];
@@ -87,7 +92,47 @@ function quizz() {
     const showedAnswers = document.querySelectorAll(".reponse");
     shuffledAnswers.forEach((answer, index) => {
         showedAnswers[index].textContent = answer;
+        showedAnswers[index].addEventListener("click", () => {
+            if (showedAnswers[index].textContent === rightAnswer[0]) {
+                showedAnswers[index].style.backgroundColor = "lightgreen";
+                answerValue.textContent = "Bonne réponse !";
+                userScore++;
+                localStorage.setItem("score", userScore);
+            } else {
+                showedAnswers[index].style.backgroundColor = "red";
+                answerValue.textContent = "Mauvaise réponse !";
+            }
+        });
     });
-}
+
+    const buttonNextPage = document.querySelector(".next-pop");
+    if (usedIndex.length === questions.length) {
+        buttonNextPage.href = "end.html";
+        buttonNextPage.textContent = "TERMINÉ";
+    };
+    if (usedIndex.length !== questions.length) {
+        do {
+            randomIndex = Math.floor(Math.random() * questions.length)
+        } while (usedIndex.includes(randomIndex));
+        localStorage.setItem("randomIndex", randomIndex);
+        buttonNextPage.href = "quizzpageimg.html";
+        buttonNextPage.textContent = "QUESTION SUIVANTE";
+    };
+
+
+    //opening answer bloc function
+    clickedAnswer.forEach(reponse =>
+        reponse.addEventListener("click", () => {
+            answerPop = document.querySelector(".answer-pop");
+            answerPop.classList.toggle("open");
+            const popupScore = document.querySelector(".popupScore");
+            popupScore.textContent = `Vous avez ${userScore} point(s) !`;
+        }));
+
+
+
+
+};
+
 
 quizz();
