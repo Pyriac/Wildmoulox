@@ -2,11 +2,13 @@ const questions = [
     {
         question: 'Quelle est la réponse à "ça va être tout noir" ?',
         answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
         question: "C'est une bonne situation ça scribe ?",
         answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard.", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction intérieure et de l'harmonie entre l'individu et son rôle dans le monde."],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
@@ -26,11 +28,13 @@ const questions = [
     {
         question: "Top ! Située entre l’Europe, le Caucase et l’Anatolie. Je suis principalement alimentée par le Danube, le Dniepr et le Don je suis je suis je suis :",
         answers: ["La mer Noire", "La mer égée", "La mer méditérannée", "La mer Rouge"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
         question: "Vous êtes Odile Deray ?",
         answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenceur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
@@ -43,17 +47,47 @@ const questions = [
     {
         question: "Ouais ouais ouais !",
         answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
 
 ]
 
-// Reset le score et autres fichiers stockés (après une partie)
-localStorage.clear()
-const playButton = document.getElementById("startQuizz");
+let userScore = parseInt(localStorage.getItem("score")) || 0;
+let randomIndex = parseInt(localStorage.getItem("randomIndex"));
+const usedIndex = JSON.parse(localStorage.getItem("usedIndex")) || [];
+console.log(`Index actuel : ${randomIndex}`);
 
-playButton.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * questions.length);
-    localStorage.setItem("randomIndex", randomIndex);
-    playButton.href = "quizzpageimg.html";
-});
+usedIndex.push(randomIndex);
+localStorage.setItem("usedIndex", JSON.stringify(usedIndex));
+console.log(`Index utilisés : ${usedIndex}`);
+
+function quizz() {
+    const rightAnswer = [];
+    rightAnswer.push(questions[randomIndex].answers[0]);
+    console.log(`Bonne réponse : ${rightAnswer}`);
+
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    const question = document.querySelector(".question");
+    question.textContent = questions[randomIndex].question;
+    const image = document.querySelector(".image");
+    image.src = questions[randomIndex].image;
+
+    const shuffledAnswers = [...questions[randomIndex].answers];
+    console.log(`Réponses à la question actuelle : ${shuffledAnswers}`);
+    shuffle(shuffledAnswers);
+    console.log(`Réponses à la question actuelle mélangées : ${shuffledAnswers}`);
+
+    const showedAnswers = document.querySelectorAll(".reponse");
+    shuffledAnswers.forEach((answer, index) => {
+        showedAnswers[index].textContent = answer;
+    });
+}
+
+quizz();
