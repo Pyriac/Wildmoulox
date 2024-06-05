@@ -59,7 +59,6 @@ const questions = [
         image: "https://forum.purplegiraffe.fr/uploads/default/original/2X/7/793e7f17298fe9e2b6b529dd26b419ddfd4509f2.jpeg",
         answers: ["Mathieu", "Mireille", "Windy", "Ta grand-mère"],
     },
-// Ewan a mis des images à partir d'ici
     {
         question: "Les doubitchous sont :",
         image: "",
