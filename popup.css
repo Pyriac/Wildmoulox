@@ -118,6 +118,8 @@ button {
 
 input[type="range"] {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
