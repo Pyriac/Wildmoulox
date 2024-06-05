@@ -48,24 +48,12 @@ const questions = [
 
 ]
 
-
-// --------A ajouter au fichier accueil.js
-// Revoir responsive img (avec img tableau)
-
 // Reset le score et autres fichiers stockés (après une partie)
 localStorage.clear()
-
 const playButton = document.getElementById("startQuizz");
 
 playButton.addEventListener("click", () => {
-    // Défini index aléatoire pour la première question
     let randomIndex = Math.floor(Math.random() * questions.length);
-    // Le stock pour quand on arrive sur la page suivante
     localStorage.setItem("randomIndex", randomIndex);
-    // Regarde si question à image ou non
-    if (questions[randomIndex].image) {
-        playButton.href = "quizzpageimg.html";
-    } else {
-        playButton.href = "quizzpage.html";
-    }
+    playButton.href = "quizzpageimg.html";
 });
