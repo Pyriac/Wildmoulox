@@ -61,7 +61,7 @@ const questions = [
     },
     {
         question: "Les doubitchous sont :",
-        image: "",
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
         answers: ["Roulés à la main sous les aisselles","Roulés sous les aisselles","Roulés avec les pieds","Roulé-boulé"],
     },
 
@@ -73,13 +73,13 @@ const questions = [
 
     {
          question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
-         image: "",
+         image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
          answers: ["À  la fraise","Au nutella","Au jambon","Au pastis"],
     },
 
     {
         question: "Le mur c'est...",
-        image: "",
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
         answers: ["Tous les jours","Toutes les semaines "," À chaque live Co"," Quand Kevin a la flemme d'expliquer"],
    },
 
