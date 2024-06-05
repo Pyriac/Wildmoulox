@@ -122,6 +122,7 @@ input[type="range"] {
     appearance: none;
 }
 
+
 input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     appearance: none;
