@@ -4,15 +4,17 @@
 const appellePopUp = document.querySelector(".popup");
 const fermerPopUp = document.querySelector(".popup-close");
 
-appellePopUp.addEventListener("click", () => {
-    addBlur = document.querySelector(".grid")
+appellePopUp.addEventListener("click", (event) => {
+    event.preventDefault();
+    addBlur = document.querySelector(".blur")
     popup = document.querySelector("#popup-overlay");
     popup.classList.toggle("open");
     addBlur.classList.toggle("open");
 });
 
-fermerPopUp.addEventListener("click", () => {
-    addBlur = document.querySelector(".grid")
+fermerPopUp.addEventListener("click", (event) => {
+    event.preventDefault();
+    addBlur = document.querySelector(".blur")
     popup = document.querySelector("#popup-overlay");
     popup.classList.remove("open");
     addBlur.classList.remove("open");
