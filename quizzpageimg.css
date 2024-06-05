@@ -171,11 +171,14 @@ a {
     display: none;
     position: absolute;
     z-index: 1;
+    border-style: 2px solid #F77F00;
 }
 
 .answer-pop.open {
     display: flex;
     background-color: var(--beige);
+    border-radius: 1rem;
+
 }
 
 .answer-content {
