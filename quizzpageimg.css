@@ -186,12 +186,8 @@ a {
     display: flex;
     flex-direction: column;
     text-align: center;
-<<<<<<< HEAD
-    margin: 4rem;
-=======
     padding: 2rem;
     width: 60%;
->>>>>>> ff2c522d7520dff93337e09bcb07bc3bfa5e5050
 }
 
 .answer-value {
