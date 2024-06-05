@@ -90,6 +90,74 @@ main {
     text-align: center;
 }
 
+/* POP UP LE SACHIEZ VOUS*/
+
+#le-sachiez-vous {
+    font-family: var(--main-font);
+    width: 100vw;
+    display: none;
+    z-index: 99;
+}
+
+#le-sachiez-vous.open {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    display: flex;
+}
+
+.pop-up-lsv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    border: solid 4px var(--orange);
+    max-width: 400px;
+    max-height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--beige);
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.pop-up-lsv h1 {
+    font-family: var(--title-font);
+    color: var(--blue);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.pop-up-lsv p {
+    font-family: var(--main-font);
+    font-size: 1.7rem;
+    color: var(--blue);
+}
+
+.close-lsv {
+    font-family: var(--title-font);
+    color: var(--blue);
+    position: absolute;
+    top: 0%;
+    right: 4%;
+    font-size: 2rem;
+    background-color: none;
+    text-shadow: 0.15rem 0.25rem 0.25rem rgba(0, 0, 0, .4);
+}
+
+.close-lsv:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
 /* LINKS */
 
 .section a {
@@ -104,21 +172,23 @@ main {
 
 .grid a:hover {
     background-color: var(--orange);
+    border: solid red;
     color: var(--beige);
     transform: scale(1.1);
 }
 
 .popup:hover {
     background-color: var(--orange);
+    border: solid red;
     color: var(--beige);
     transform: scale(1.1);
     width: 100%;
     height: 100%;
 }
 
-.grid a:visited {
+/* .grid a:visited {
     color: black;
-}
+} */
 
 /* VERSION DESKTOP */
 
