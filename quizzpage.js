@@ -2,11 +2,13 @@ const questions = [
     {
         question: 'Quelle est la réponse à "ça va être tout noir" ?',
         answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
         question: "C'est une bonne situation ça scribe ?",
         answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard.", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction intérieure et de l'harmonie entre l'individu et son rôle dans le monde."],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
@@ -26,11 +28,13 @@ const questions = [
     {
         question: "Top ! Située entre l’Europe, le Caucase et l’Anatolie. Je suis principalement alimentée par le Danube, le Dniepr et le Don je suis je suis je suis :",
         answers: ["La mer Noire", "La mer égée", "La mer méditérannée", "La mer Rouge"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
         question: "Vous êtes Odile Deray ?",
         answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenceur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
     {
@@ -43,41 +47,26 @@ const questions = [
     {
         question: "Ouais ouais ouais !",
         answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
+        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
 
     },
 
 ]
 
-// ----------A faire :
-// Vérifier les :
-// >> Max caractères questionImage = 93 ch 
-// >> Max caractères réponseImage = 64 ch
-// Page alert quand on clique sur précédent ? (pas forcément utile)
-
-let randomIndex = parseInt(localStorage.getItem("randomIndex"));
 let userScore = parseInt(localStorage.getItem("score")) || 0;
+let randomIndex = parseInt(localStorage.getItem("randomIndex"));
 const usedIndex = JSON.parse(localStorage.getItem("usedIndex")) || [];
+console.log(`Index actuel : ${randomIndex}`);
+
+usedIndex.push(randomIndex);
+localStorage.setItem("usedIndex", JSON.stringify(usedIndex));
+console.log(`Index utilisés : ${usedIndex}`);
 
 function quizz() {
-    // Ajoute l'index utilisé au tableau usedIndex
-    if (usedIndex.includes(randomIndex)) {
-    } else {
-        usedIndex.push(randomIndex);
-    }
-
-    localStorage.setItem("usedIndex", JSON.stringify(usedIndex));
-    console.log("Used questions:", usedIndex);
-
-    if (questions[randomIndex].length === 3) {
-        const image = document.querySelector(".image");
-        image.src = questions[randomIndex].image;
-    }
-
-    // Stock la bonne réponse dans un tableau
     const rightAnswer = [];
     rightAnswer.push(questions[randomIndex].answers[0]);
+    console.log(`Bonne réponse : ${rightAnswer}`);
 
-    // Fonction mélange (shuffle en anglais) : algorithme de Fisher-Yates (trouvé en ligne)
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -85,63 +74,20 @@ function quizz() {
         }
     }
 
-    // Affiche la question
     const question = document.querySelector(".question");
     question.textContent = questions[randomIndex].question;
+    const image = document.querySelector(".image");
+    image.src = questions[randomIndex].image;
 
-    // Copie le tableau des réponses, puis le mélange
     const shuffledAnswers = [...questions[randomIndex].answers];
+    console.log(`Réponses à la question actuelle : ${shuffledAnswers}`);
     shuffle(shuffledAnswers);
+    console.log(`Réponses à la question actuelle mélangées : ${shuffledAnswers}`);
 
-    // Affiche les réponses mélangées
     const showedAnswers = document.querySelectorAll(".reponse");
     shuffledAnswers.forEach((answer, index) => {
         showedAnswers[index].textContent = answer;
     });
-
-    // Ajoute un event click qui compare la réponse
-    showedAnswers.forEach((clickedAnswer) => {
-        clickedAnswer.addEventListener("click", () => {
-            if (clickedAnswer.textContent === rightAnswer[0]) {
-                userScore++;
-                // Stock le score en localstorage
-                localStorage.setItem("score", userScore);
-                alert(`Bonne réponse ! Votre score actuel : ${userScore}`);
-            } else {
-                localStorage.setItem("score", userScore);
-                alert(`Mauvaise réponse ! Votre score actuel : ${userScore}`);
-            }
-
-            // nextPage();
-        });
-    });
-
 }
-
-
-// Après un clic sur une réponse, vérifie qu'il reste des questions, prépare la suivante, ouvre la page correspondante, dont la page end s'il n'y en a plus
-// function nextPage() {
-//     // S'il n'y a plus de questions, renvoie à la page end
-//     if (usedIndex.length === questions.length) {
-//         alert(` Nb de questions utilisées = ${usedIndex.length} / ${questions.length}`);
-//         console.log("Nombre maximum de questions atteint ! Passage à la page end");
-//         window.location.href = "end.html";
-//     } else {
-//         // Génère une question non posée
-//         do {
-//             randomIndex = Math.floor(Math.random() * questions.length)
-//         } while (usedIndex.includes(randomIndex));
-//         localStorage.setItem("randomIndex", randomIndex);
-
-//         // Vérifie si une image est présente ou non
-//         if ((Object.keys(questions[randomIndex]).length === 2)) {
-//             window.location.href = "quizzpage.html";
-//         } else {
-//             window.location.href = "quizzpageimg.html";
-//         }
-//     }
-// }
-
-
 
 quizz();

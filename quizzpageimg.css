@@ -33,12 +33,17 @@ body {
 
 
 main {
+    z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-inline: 1rem;
     flex: 1;
+}
+
+.blur.open {
+    filter: blur(10px);
 }
 
 /* #endregion */
@@ -90,6 +95,7 @@ main {
     font-weight: bold;
     display: flex;
 }
+
 
 /* #endregion */
 
@@ -150,6 +156,28 @@ a {
 
 
 /* #endregion */
+
+/* Pop-up Answer */
+.answer-pop {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.answer-pop.open {
+    display: flex;
+    background-color: var(--beige);
+}
+
+.answer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.answer-value {
+    font-family: var(--title-font);
+}
 
 /* #region -------- Media query Header*/
 @media screen and (min-width: 992px) {
