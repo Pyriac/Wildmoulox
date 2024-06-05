@@ -45,15 +45,20 @@ const questions = [
         answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
 
     },
+    
 
 ]
 
-// Reset le score et autres fichiers stockés (après une partie)
-localStorage.clear()
-const playButton = document.getElementById("startQuizz");
+console.log(questions.length)
 
-playButton.addEventListener("click", () => {
-    let randomIndex = Math.floor(Math.random() * questions.length);
-    localStorage.setItem("randomIndex", randomIndex);
-    playButton.href = "quizzpageimg.html";
-});
+//  let userScore = parseInt(localStorage.getItem("score"));
+
+let userScore = parseInt(localStorage.getItem("score")) || 8;
+
+const score = document.querySelector(".variable");
+
+score.textContent = userScore;
+
+const score2 = document.querySelector(".sur30");
+
+score2.textContent = `/${questions.length}` ;
