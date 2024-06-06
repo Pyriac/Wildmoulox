@@ -89,8 +89,13 @@ const questions = [
         image: "https://s1.dmcdn.net/v/67Dhi1LPTWUJQAOEl/x1080",
         answers: ["Qu'il y a 2 lunes", "Que la lune n'existe pas", "Qu'il y a des aliens sur la face cachée de la lune", "Que la lune est au centre de l'univers"],
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74916a3abdde1b46c0de2ae948b5ab7bb8bca90a
 ];
 
+// module.exports = questions;
 
 //creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");
@@ -144,11 +149,11 @@ function quizz() {
     });
 
     const buttonNextPage = document.querySelector(".next-pop");
-    if (usedIndex.length === questions.length) {
+    if (usedIndex.length === 10) {
         buttonNextPage.href = "end.html";
         buttonNextPage.textContent = "TERMINÉ";
     };
-    if (usedIndex.length !== questions.length) {
+    if (usedIndex.length !== 10) {
         do {
             randomIndex = Math.floor(Math.random() * questions.length)
         } while (usedIndex.includes(randomIndex));
