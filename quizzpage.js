@@ -96,8 +96,9 @@ const questions = [
         answers: "",
     }
 
-]
+];
 
+// module.exports = questions;
 
 //creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");
@@ -151,11 +152,11 @@ function quizz() {
     });
 
     const buttonNextPage = document.querySelector(".next-pop");
-    if (usedIndex.length === questions.length) {
+    if (usedIndex.length === 10) {
         buttonNextPage.href = "end.html";
         buttonNextPage.textContent = "TERMINÉ";
     };
-    if (usedIndex.length !== questions.length) {
+    if (usedIndex.length !== 10) {
         do {
             randomIndex = Math.floor(Math.random() * questions.length)
         } while (usedIndex.includes(randomIndex));
