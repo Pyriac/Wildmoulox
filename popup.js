@@ -37,8 +37,10 @@ volumeControl.addEventListener("input", () => {
 
 // Play et Stop
 
+
 const playMusic = document.querySelector(".music-play");
 const stopMusic = document.querySelector(".music-stop");
+
 
 playMusic.addEventListener("click", () => {
     // console.log("click")
@@ -47,13 +49,41 @@ playMusic.addEventListener("click", () => {
 stopMusic.addEventListener("click", () => {
     // console.log("click")
     backgroundMusic.pause();
-    backgroundMusic.load();
 });
+
+
+
 
 //loop
 backgroundMusic.loop = true;
 
 //local storage
 
-localStorage.setItem(audio,)
+
+const savedTime = localStorage.getItem("music-current-time");
+const savedPlaying = localStorage.getItem("music-playing");
+
+if (savedTime) {
+    backgroundMusic.currentTime = parseFloat(savedTime);
+}
+
+if (savedPlaying === "true") {
+    backgroundMusic.play();
+}
+else {
+    backgroundMusic.pause();
+}
+
+
+backgroundMusic.addEventListener("timeupdate", () => {
+    localStorage.setItem("music-current-time", backgroundMusic.currentTime);
+});
+
+backgroundMusic.addEventListener("play", () => {
+    localStorage.setItem("music-playing", "true");
+});
+
+backgroundMusic.addEventListener("pause", () => {
+    localStorage.setItem("music-playing", "false");
+});
 

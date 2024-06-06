@@ -3,14 +3,14 @@ const questions = [
         question: 'Quelle est la réponse à "ça va être tout noir" ?',
         image: "https://www.serieously.com/app/uploads/2022/07/rrrrrrr-ccca7a-va-ecc82tre-tout-noir.jpg",
         imageAlt: "Pierre de RRRrrrr tient une torche",
-        answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
+        answers: ['Ta gueule', 'Non', 'Attends un peu !', 'À mes yeux tu brilles même dans le noir'],
 
     },
     {
         question: "C'est une bonne situation ça scribe ?",
         image: "https://images.lanouvellerepublique.fr/image/upload/t_1020w/f_auto/646ca4fea3ea7f23498b456e.jpg",
         imageAlt: "Otis de Astérix et Obélix mission cléopatre",
-        answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard.", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction"],
+        answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction"],
     },
 
     {
@@ -36,25 +36,25 @@ const questions = [
 
     },
     {
-        question: `compléter ce dialogue : "J'ai fait deux ans d'études à Montpellier."
+        question: `Complétez ce dialogue : "J'ai fait deux ans d'études à Montpellier."
         - "De ?"`,
         image: "https://us-tuna-sounds-images.voicemod.net/fee83811-48eb-4d49-821e-5e6b7e760580-1672595687145.jpg",
         imageAlt: "Ponce et Antoine Daniel au restaurant",
-        answers: ["ans d'études à Montpellier", "Histoire de l'art", "LEA Allemand", "Pas besoin d'études pour être connu finalement"],
+        answers: ["Ans d'études à Montpellier", "Histoire de l'art", "LEA Allemand", "Pas besoin d'études pour être connu finalement"],
 
     },
     {
         question: "Ouais ouais ouais !",
         image: "https://clips-media-assets2.twitch.tv/IZEKkb7vx-HoNZXuvUpndQ/AT-cm%7CIZEKkb7vx-HoNZXuvUpndQ-preview-480x272.jpg",
         imageAlt: "Baghera Jones au ZEvent",
-        answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
+        answers: ["Ouais ouais ouais", "Non non non", "Peut-être", "C'est validé !"],
 
     },
     {
         question: "Après de nombreuses recherches scientifiques, le professeur Cyrielle a trouvé que la logique c'est :",
         image: "https://avatars.githubusercontent.com/u/118595509?v=4",
         imageAlt: "Portrait de Cyrielle",
-        answers: ["Logique", "Eclaté au sol", "Inutile", "la Lorraine"],
+        answers: ["Logique", "Éclaté au sol", "Inutile", "la Lorraine"],
     },
     {
         question: "Qui est le meilleur générateur de meme ?",
@@ -62,7 +62,7 @@ const questions = [
         imageAlt: "reference à la série Squid Game évoquant l'horreur de bosser sans Google pour un développeur",
         answers: ["Mathieu", "Mireille", "Windy", "Ta grand-mère"],
     },
-    // Ewan a mis des images à partir d'ici
+
     {
         question: "Les doubitchous sont :",
         image: "https://i.ytimg.com/vi/hYeMacIIlQE/maxresdefault.jpg",
