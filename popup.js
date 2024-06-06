@@ -53,6 +53,7 @@ stopMusic.addEventListener("click", () => {
 //loop
 backgroundMusic.loop = true;
 
+//local storage
 
-
+localStorage.setItem(audio,)
 
