@@ -18,10 +18,11 @@
 
 }
 
+/* BODY */
+
 body {
     background-color: var(--beige);
     font-family: var(--main-font);
-
 }
 
 a {
@@ -37,6 +38,7 @@ a {
 /* HEADER */
 
 header {
+
     background-color: var(--brown);
     font-family: var(--title-font);
     display: flex;
@@ -111,10 +113,9 @@ h2 {
     align-content: center;
 }
 
-.pf>p {
+.pf>ul {
     padding: 0.5rem;
     width: 25ch;
-
 }
 
 button {
@@ -123,7 +124,6 @@ button {
     color: #F77F00;
     font-size: 2rem;
     width: 70svw;
-
     border-radius: 5rem 5rem 5rem 5rem;
     box-shadow: 6px 6px 5px rgb(247, 127, 0, 0.4);
     display: flex;
@@ -148,7 +148,6 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .end:hover {
@@ -197,47 +196,50 @@ button:hover {
     .rectangle {
         background-color: var(--orange);
         width: 85%;
-        max-width: 650px;
+        height: 100px;
+        max-width: 550px;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 1rem;
-        margin-top: 5rem;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        font-size: larger;
-
+        font-size: bold;
+        margin-top: 15vh;
+        padding: 10px;
     }
 
     h1 {
-        letter-spacing: 0.2rem
+        letter-spacing: 0.2rem border: solid 2px black;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
-    .pf>p {
-        width: 39ch;
-        font-size: 2rem;
-        margin: 1rem
+    .pf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pf>ul {
+        width: 35ch;
+        font-size: 1.5rem;
+        margin-top: 20px;
     }
 
     button {
-        width: 616px;
+        width: 550px;
         max-width: 850px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 4.5rem;
+        margin: 0 auto;
     }
 
     .disapear {
         display: flex;
         width: 65px;
         fill: var(--blue);
-
-
     }
 
     .bi-arrow-right-short {
@@ -246,9 +248,18 @@ button:hover {
         fill: var(--orange);
     }
 
-
-    /* END BODY RULES */
-
+    .section-end-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
 }
+
+
+
+/* END BODY RULES */
+
+
 
 /* END DESKTOP RULES */
