@@ -267,7 +267,7 @@ a {
     .imageEtReponses {
         display: flex;
         flex-direction: row;
-        margin-top: 4rem;
+        margin-top: 2vh;
         max-height: 90%;
         justify-content: space-around;
         max-width: 100%;

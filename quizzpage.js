@@ -36,8 +36,8 @@ const questions = [
 
     },
     {
-        question: `compléter ce dialogue "J'ai fait deux ans d'études à Montpellier.
-        - De ?"`,
+        question: `compléter ce dialogue : "J'ai fait deux ans d'études à Montpellier."
+        - "De ?"`,
         image: "https://us-tuna-sounds-images.voicemod.net/fee83811-48eb-4d49-821e-5e6b7e760580-1672595687145.jpg",
         imageAlt: "Ponce et Antoine Daniel au restaurant",
         answers: ["ans d'études à Montpellier", "Histoire de l'art", "LEA Allemand", "Pas besoin d'études pour être connu finalement"],
