@@ -66,7 +66,7 @@ header svg {
 }
 
 header svg:hover {
-    transform: scale(1.5);
+    transform: scale(1.10);
 }
 
 
@@ -117,7 +117,7 @@ h2 {
 
 }
 
-button {
+.end {
     background-color: var(--blue);
     font-family: var(--title-font);
     color: #F77F00;
@@ -130,10 +130,6 @@ button {
     justify-content: center;
     padding: 0.5rem;
     margin-top: 1rem;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 .disapear {
@@ -153,6 +149,7 @@ button:hover {
 
 .end:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 /* MOBILE RULES END*/
@@ -223,7 +220,7 @@ button:hover {
         margin: 1rem
     }
 
-    button {
+    .end {
         width: 616px;
         max-width: 850px;
         display: flex;
