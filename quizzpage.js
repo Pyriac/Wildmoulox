@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: 'Quelle est la réponse à "ça va être tout noir" ?',
+        question: 'Quelle est la réponse à "ça va être tout noir" ? OK',
         image: "https://www.serieously.com/app/uploads/2022/07/rrrrrrr-ccca7a-va-ecc82tre-tout-noir.jpg",
         answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
 
@@ -39,7 +39,7 @@ const questions = [
     },
     {
         question: "Ouais ouais ouais !",
-        image: "https://imgur.com/a/q3db1qW",
+        image: "https://clips-media-assets2.twitch.tv/IZEKkb7vx-HoNZXuvUpndQ/AT-cm%7CIZEKkb7vx-HoNZXuvUpndQ-preview-480x272.jpg",
         answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
 
     },
@@ -88,15 +88,8 @@ const questions = [
         question: "Que pense Kim des marseillais à propos de la lune ?",
         image: "https://s1.dmcdn.net/v/67Dhi1LPTWUJQAOEl/x1080",
         answers: ["Qu'il y a 2 lunes", "Que la lune n'existe pas", "Qu'il y a des aliens sur la face cachée de la lune", "Que la lune est au centre de l'univers"],
-    },
-
-    {
-        question: "",
-        image: "",
-        answers: "",
     }
-
-]
+];
 
 
 //creating calling const
