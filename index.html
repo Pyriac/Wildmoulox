@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quizz humoristique">
+    <meta name="keywords" content="quiz, funny, comedy">
+    <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" href="popup.css">
+    <title>Wildmoulox</title>
+</head>
+
+
+<body>
+    <header>
+        <h1>wildmoulox</h1>
+    </header>
+    <main>
+        <p class="disclaimer">N'hésite pas à appuyer sur les différents éléments de la grille !</p>
+        <div class="container">
+
+            <div class="grid blur">
+                <section class="section">
+                    <a href="" id="audioLinkKamoulox">
+                        <img src="Images/kamoulox.png" alt="Photo du jeu kamoulox">
+                    </a>
+                    <audio id="audioKamoulox" src="Fichier-audios/kamoulox-1.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <img src="Images/banane.png" alt="Image d'une banane">
+                </section>
+
+                <section class="section">
+                    <img src="Images/camembert.png" alt="Photo d'un camembert">
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkDenis">
+                        <img src="Images/denisBrogniart-.png" alt="Mème de Denis Brogniart">
+                    </a>
+                    <audio id="audioDenis" src="Fichier-audios/DenisBrogniartAH.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <img src="Images/parapluie.png" alt="Image d'un parapluie">
+                </section>
+
+                <section class="section">
+                    <a href="" class="popup-link">
+                        <img class="imgBeige" src="Images/interrogation.png" alt="Point d'interrogation">
+                    </a>
+                </section>
+
+                <section class="section" id="velo">
+                    <img src="Images/velo.png" alt="Image d'un vélo">
+                </section>
+
+                <section class="section">
+                    <a href="" id="startQuizz">Jouer</a>
+                </section>
+
+                <section class="section">
+                    <img src="Images/lunettes.png" alt="Point d'une paire de lunettes de soleil">
+                </section>
+
+                <section class="section">
+                    <a href="" class="popup-link">
+                        <img class="imgBeige" src="Images/interrogation.png" alt="Point d'interrogation">
+                    </a>
+                </section>
+
+                <section class="section">
+                    <img src="Images/camembert.png" alt="Photo d'un camembert">
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkSouffrir">
+                        <img src="Images/souffrir.png" alt="Mème de c'est mon choix">
+                    </a>
+                    <audio id="audioSouffrir" src="Fichier-audios/je-suis-pas-venue-ici-pour-souffrir-ok.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <a href="" class="popup-link">
+                        <img class="imgBeige" src="Images/interrogation.png" alt="Point d'interrogation">
+                    </a>
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkPerceval">
+                        <img src="Images/c-pas-faux.png" alt="Mème de Perceval dans Kaamelott c'est pas faux">
+                    </a>
+                    <audio id="audioPerceval" src="Fichier-audios/perceval-kaamelott-ouais-cest-pas-faux.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <p>made <br> by <br> becs</p>
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkMarc">
+                        <img src="Images/marc-pleure-le-flambeau.png" alt="Mème de Marc qui pleure dans Le Flambeau"
+                            onclick=" playGif(this, 'GIF/jonathan-cohen-la-flamme.gif', 3000)">
+                    </a>
+                    <audio id="audioMarc" src="Fichier-audios/marc-pleure-le-flambeau.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <a href="" class="popup-link">
+                        <img class="imgBeige" src="Images/interrogation.png" alt="Point d'interrogation">
+                    </a>
+                </section>
+
+                <section class="section">
+                    <img src="Images/parapluie.png" alt="Image d'un parapluie">
+                </section>
+
+                <section class="section">
+                    <button class="popup">options</button>
+
+                    <audio class="background-music" src="Fichier-audios/background-music.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <img src="Images/banane.png" alt="Image d'une banane">
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkVelo">
+                        <img src="Images/velo.png" alt="Image d'un vélo">
+                    </a>
+                    <audio id="audioVelo" src="Fichier-audios/mon-velo.mp3"></audio>
+                </section>
+
+                <section class="section">
+                    <a href="regle.html">règles</a>
+                </section>
+
+                <section class="section">
+                    <img src="Images/lunettes.png" alt="Point d'une paire de lunettes de soleil">
+                </section>
+
+                <section class="section">
+                    <a href="" class="popup-link">
+                        <img class="imgBeige" src="Images/interrogation.png" alt="Point d'interrogation">
+                    </a>
+                </section>
+
+                <section class="section">
+                    <a href="" id="audioLinkRisitas">
+                        <img src="Images/risitas.png" alt="Mème d'el risitas">
+                    </a>
+                    <audio id="audioRisitas" src="Fichier-audios/le-rire-de-risitas.mp3"></audio>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- PARTIE POPUP -->
+        <!-- POP UP OPTION -->
+
+        <div id="popup-overlay">
+            <div class="popup-content">
+                <button class="music-play">PLAY</button>
+                <div class="volume-controle">
+                    <H2 class="title-popup">AUDIO VOLUME</H2>
+                    <input type="range" id="volume" name="volume" min="0" max="1" step="0.01" value="1">
+
+                </div>
+                <button class="music-stop">STOP</button>
+
+                <button class="popup-close">X</button>
+            </div>
+        </div>
+
+        <!-- POP UP LE SACHIEZ-VOUS -->
+
+        <div id="le-sachiez-vous">
+            <div class="pop-up-lsv">
+                <h1>Le sachiez-vous?</h1>
+                <p id="paragraphBox">Le feu ça brûle.</p>
+                <button class="close-lsv">X</button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- APPEL DES SCRIPTS -->
+
+    <script src="popup.js"></script>
+
+    <script src="sarah.js" defer></script>
+
+    <script src="accueil.js"></script>
+
+
+
+</body>
+
+</html>
