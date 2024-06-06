@@ -1,20 +1,14 @@
 const questions = [
     {
         question: 'Quelle est la réponse à "ça va être tout noir" ?',
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
+        image: "https://www.serieously.com/app/uploads/2022/07/rrrrrrr-ccca7a-va-ecc82tre-tout-noir.jpg",
         answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
 
     },
     {
         question: "C'est une bonne situation ça scribe ?",
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
-        answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard.", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction ..."],
-    },
-    {
-        question: 'Gérard sait :',
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
-        answers: ["Chanter du Barbara", "Compter 2 par 2 et lasser ses chaussures", "Rester sobre plus de 24h", "Prendre le train à Lyon Part-Dieu"],
-
+        image: "https://images.lanouvellerepublique.fr/image/upload/t_1020w/f_auto/646ca4fea3ea7f23498b456e.jpg",
+        answers: ["Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation", "Pas autant qu'architecte", "On en a marre de t'entendre Edouard.", "Une bonne situation dépend moins de la nature de la profession que de la satisfaction"],
     },
 
     {
@@ -26,13 +20,13 @@ const questions = [
 
     {
         question: "Top ! Située entre l’Europe, le Caucase et l’Anatolie. Je suis principalement alimentée par le Danube, le Dniepr et le Don je suis je suis je suis :",
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
+        image: "https://static.actu.fr/uploads/2018/03/Julien-Lepers-Question-pour-un-champion.jpg",
         answers: ["La mer Noire", "La mer égée", "La mer méditérannée", "La mer Rouge"],
 
     },
     {
         question: "Vous êtes Odile Deray ?",
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
+        image: "https://www.serieously.com/app/uploads/2022/07/la-cite-de-la-peur-odile-aeroport.jpg",
         answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenceur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
 
     },
@@ -45,7 +39,7 @@ const questions = [
     },
     {
         question: "Ouais ouais ouais !",
-        image: "https://media-mcetv.ouest-france.fr/wp-content/uploads/2014/12/G%C3%A9rard-Depardieu-tue-deux-lions-et-les-mange-e1418663753544.jpg",
+        image: "https://imgur.com/a/q3db1qW",
         answers: ["Ouais ouais ouais", "Non non non", "peut-être", "C'est validé !"],
 
     },
@@ -62,7 +56,7 @@ const questions = [
     // Ewan a mis des images à partir d'ici
     {
         question: "Les doubitchous sont :",
-        image: "",
+        image: "https://i.ytimg.com/vi/hYeMacIIlQE/maxresdefault.jpg",
         answers: ["Roulés à la main sous les aisselles", "Roulés sous les aisselles", "Roulés avec les pieds", "Roulé-boulé"],
     },
 
@@ -74,13 +68,13 @@ const questions = [
 
     {
         question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
-        image: "",
+        image: "https://cdn.discordapp.com/attachments/1243225688929206404/1248181621031698493/le-sandwich-a-la-fraise.png?ex=6662bb38&is=666169b8&hm=c5df9c3f819e3b91ca3570fcdac036440984435e2d2be5cadef1cd184f7afb7e&",
         answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
     },
 
     {
         question: "Le mur c'est...",
-        image: "",
+        image: "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2024/06/mur-meme-wall-680x383.jpg?resize=500,281&key=ffd90ef8",
         answers: ["Tous les jours", "Toutes les semaines ", " À chaque live Co", " Quand Kevin a la flemme d'expliquer"],
     },
 
@@ -96,8 +90,15 @@ const questions = [
         answers: ["Qu'il y a 2 lunes", "Que la lune n'existe pas", "Qu'il y a des aliens sur la face cachée de la lune", "Que la lune est au centre de l'univers"],
     },
 
-]
+    {
+        question: "",
+        image: "",
+        answers: "",
+    }
 
+];
+
+// module.exports = questions;
 
 //creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");
@@ -151,11 +152,11 @@ function quizz() {
     });
 
     const buttonNextPage = document.querySelector(".next-pop");
-    if (usedIndex.length === questions.length) {
+    if (usedIndex.length === 10) {
         buttonNextPage.href = "end.html";
         buttonNextPage.textContent = "TERMINÉ";
     };
-    if (usedIndex.length !== questions.length) {
+    if (usedIndex.length !== 10) {
         do {
             randomIndex = Math.floor(Math.random() * questions.length)
         } while (usedIndex.includes(randomIndex));
