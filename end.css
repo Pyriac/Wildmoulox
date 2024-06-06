@@ -79,7 +79,7 @@ header svg {
 }
 
 header svg:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 
@@ -173,7 +173,7 @@ h2 {
     margin-top: 2rem;
 }
 
-button:hover {
+.end:hover {
     transform: scale(1.05);
 }
 
@@ -201,6 +201,8 @@ button:hover {
     header {
         margin: 0;
         height: 90px;
+        position: absolute;
+        top: 0%;
     }
 
     header svg {
@@ -228,10 +230,17 @@ button:hover {
 
     /* BODY RULES */
 
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .results {
 
-        margin-top: 4svh;
-        height: 45svh;
+        margin-top: 10svh;
+        min-height: 320px;
+        height: 25svh;
         width: 55svw;
         max-width: 630px;
         border-radius: 2rem 2rem 2rem 2rem;
@@ -265,11 +274,12 @@ button:hover {
     .nombre-mauvaises-rep {
         background: rgb(247, 127, 0);
         background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 80%);
-        width: 15svw;
+        width: 200px;
+        height: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 10rem 10rem 10rem 10rem;
+        border-radius: 100%;
     }
 
 
@@ -282,7 +292,6 @@ button:hover {
         padding: 0;
         font-weight: 300;
         margin: 1rem
-        
     }
 
 
