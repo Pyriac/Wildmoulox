@@ -71,7 +71,7 @@ const questions = [
     },
 
     {
-        question: "Que dit Olivier à la fin de chaque épisode de Sergent Pepper ?",
+        question: "Que dit le sheriff à la fin de chaque épisode de Sergent Pepper ?",
         image: "https://i.ytimg.com/vi/wbaPelv4swo/sddefault.jpg",
         imageAlt: "Olivier de Sergent Pepper",
         answers: ["This is the law", "This is the job", "This is the way", "This is the flow"],
