@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: 'Quelle est la réponse à "ça va être tout noir" ? OK',
+        question: 'Quelle est la réponse à "ça va être tout noir" ?',
         image: "https://www.serieously.com/app/uploads/2022/07/rrrrrrr-ccca7a-va-ecc82tre-tout-noir.jpg",
         imageAlt: "Pierre de RRRrrrr tient une torche",
         answers: ['Ta gueule', 'Non', 'Attends un peu !', 'à mes yeux tu brilles même dans le noir'],
