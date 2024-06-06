@@ -57,7 +57,7 @@ const questions = [
         answers: ["Logique", "Eclaté au sol", "Inutile", "la Lorraine"],
     },
     {
-        question: "Qui est le meilleur générateur de mêmes ?",
+        question: "Qui est le meilleur générateur de meme ?",
         image: "https://forum.purplegiraffe.fr/uploads/default/original/2X/7/793e7f17298fe9e2b6b529dd26b419ddfd4509f2.jpeg",
         imageAlt: "reference à la série Squid Game évoquant l'horreur de bosser sans Google pour un développeur",
         answers: ["Mathieu", "Mireille", "Windy", "Ta grand-mère"],
