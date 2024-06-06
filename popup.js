@@ -62,9 +62,14 @@ backgroundMusic.loop = true;
 
 const savedTime = localStorage.getItem("music-current-time");
 const savedPlaying = localStorage.getItem("music-playing");
+const savedVolume = localStorage.getItem("music-volume");
 
 if (savedTime) {
     backgroundMusic.currentTime = parseFloat(savedTime);
+}
+
+if (savedVolume) {
+    backgroundMusic.volume = parseFloat(savedVolume)
 }
 
 if (savedPlaying === "true") {
@@ -87,3 +92,6 @@ backgroundMusic.addEventListener("pause", () => {
     localStorage.setItem("music-playing", "false");
 });
 
+backgroundMusic.addEventListener("volumechange", () => {
+    localStorage.setItem("music-volume", backgroundMusic.volume);
+})
