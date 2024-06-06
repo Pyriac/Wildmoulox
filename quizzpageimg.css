@@ -90,8 +90,8 @@ main {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     line-height: 1.25rem;
-    padding: 0.25rem 0.5rem;
-    max-height: 4.25rem;
+    padding: 0.5rem 0.75rem;
+    max-height: 20svh;
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
     font-weight: bold;
     display: flex;
@@ -110,8 +110,7 @@ main {
 }
 
 .image {
-    max-height: 13.75rem;
-    max-width: auto;
+    max-width: 100%;
     padding: 0;
     border: 2px solid var(--blue);
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -126,10 +125,10 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.5rem;
     justify-content: space-between;
     align-content: space-between;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border-radius: 0.75rem;
 }
 
@@ -149,12 +148,12 @@ a {
 .reponse {
     color: var(--blue);
     background-color: #F8E28E;
-    padding: 0.25rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     line-height: 1.25rem;
     font-size: 1rem;
-    flex: 1 1 calc(50% - 1rem);
-    max-height: 6.75rem;
+    flex: 1 1 calc(50% - 2rem);
+    max-height: 20svh;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -167,7 +166,7 @@ a {
 
 /* #endregion */
 
-/* Pop-up Answer */
+/* #region -------- Pop-up Answer */
 .answer-pop {
     display: none;
     position: absolute;
@@ -215,6 +214,8 @@ a {
     margin: 1.5rem;
 }
 
+/* #endregion */
+
 /* #region -------- Media query Header*/
 @media screen and (min-width: 992px) {
     .navbar h1 {
@@ -242,30 +243,30 @@ a {
 @media screen and (min-width: 992px) {
     .question {
         line-height: 2rem;
-        padding: 1rem 1rem;
+        padding: 1.25rem;
         box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
         font-size: 1.5rem;
         max-height: unset;
-        max-width: 70vw;
-
+        max-width: 60vw;
     }
 }
 
 /* #endregion */
 
-/* #region -------- Media query imageReponse */
-
+/* #region -------- Media query image et réponses*/
 @media screen and (min-width: 992px) {
     .imageEtReponses {
         display: flex;
         flex-direction: row;
         margin-top: 4rem;
         max-height: 100%;
+        justify-content: space-around;
+
     }
 
     .image {
         max-height: unset;
-        max-width: unset;
+        max-width: 650px;
         padding: 0;
         border: 3px solid var(--blue);
         box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -290,9 +291,9 @@ a {
         border-radius: 1rem;
         padding: 0.75rem;
         line-height: 1.75rem;
+        min-width: 300px;
     }
 
 }
-
 
 /* #endregion */
