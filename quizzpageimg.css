@@ -270,7 +270,7 @@ a {
     }
 
     .image {
-        max-height: unset;
+        max-height: 400px;
         max-width: 650px;
         padding: 0;
         border: 3px solid var(--blue);
