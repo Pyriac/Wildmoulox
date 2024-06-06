@@ -54,7 +54,7 @@ const questions = [
         question: "Après de nombreuses recherches scientifiques, le professeur Cyrielle a trouvé que la logique c'est :",
         image: "https://avatars.githubusercontent.com/u/118595509?v=4",
         imageAlt: "Portrait de Cyrielle",
-        answers: ["Logique", "Éclaté au sol", "Inutile", "la Lorraine"],
+        answers: ["Logique", "Éclaté au sol", "Inutile", "La Lorraine"],
     },
     {
         question: "Qui est le meilleur générateur de meme ?",

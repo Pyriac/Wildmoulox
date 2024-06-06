@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wildmoulox | Résultat</title>
   <link rel="stylesheet" href="regle.css" />
+  <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
@@ -16,23 +17,24 @@
           d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
       </svg></a>
     <h1>WILDMOULOX</h1>
-    <a href="options.html"><svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="bi-list" viewBox="0 0 16 16">
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="popup" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
       </svg></a>
   </header>
   <main>
-    <section class="rectangle">
-      <h2>Règles du jeu</h2>
-    </section>
-    <section class="pf">
-      <ul>
-        <li>Chaque partie contient 10 questions.</li>
-        <li>Une seule réponse est valide sur les quatre.</li>
-        <li>Chaque réponse vaut 1 point.</li>
-        <li>Attention! Une fois la réponse sélectionnée vous ne pouvez plus modifier votre choix.</li>
-      </ul>
-      <!-- <p>Chaque partie contient 10 questions.</p>
+    <div class="blur">
+      <section class="rectangle">
+        <h2>Règles du jeu</h2>
+      </section>
+      <section class="pf">
+        <ul>
+          <li>Chaque partie contient 10 questions.</li>
+          <li>Une seule réponse est valide sur les quatre.</li>
+          <li>Chaque réponse vaut 1 point.</li>
+          <li>Attention! Une fois la réponse sélectionnée vous ne pouvez plus modifier votre choix.</li>
+        </ul>
+        <!-- <p>Chaque partie contient 10 questions.</p>
       <p>Une seule réponse est valide sur les quatre.</p>
       <p>Chaque réponse vaut un point.</p>
       <p>
@@ -40,21 +42,38 @@
         modifier votre choix.
       </p> -->
 
-    </section>
-    <section>
-      <a href="index.html" class="end">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="disapear" viewBox="0 0 16 16">
-          <path
-            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-        </svg>TERMINÉ
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="bi-arrow-right-short" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-        </svg>
+      </section>
+      <section>
+        <a href="index.html" class="end">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="disapear" viewBox="0 0 16 16">
+            <path
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+          </svg>TERMINÉ
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#000" class="bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+          </svg>
 
-      </a>
-    </section>
+        </a>
+      </section>
+    </div>
+    <div id="popup-overlay">
+      <div class="popup-content">
+        <button class="music-play">PLAY</button>
+        <div class="volume-controle">
+          <H2 class="title-popup">AUDIO VOLUME</H2>
+          <input type="range" id="volume" name="volume" min="0" max="1" step="0.01" value="1">
+
+        </div>
+        <button class="music-stop">STOP</button>
+
+        <button class="popup-close">X</button>
+      </div>
+    </div>
+    <audio class="background-music" src="Fichier-audios/background-music.mp3"></audio>
+
   </main>
+  <script src="popup.js"></script>
 </body>
 
 </html>

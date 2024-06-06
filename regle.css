@@ -30,6 +30,16 @@ a {
     color: #F77F00;
 }
 
+.blur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blur.open {
+    filter: blur(10px);
+}
+
 
 /* GLOBAL RULES END */
 
