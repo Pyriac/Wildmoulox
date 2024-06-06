@@ -98,6 +98,7 @@ const questions = [
 
 ]
 
+// module.exports = questions;
 
 //creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");

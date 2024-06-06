@@ -59,42 +59,42 @@ const questions = [
         image: "https://forum.purplegiraffe.fr/uploads/default/original/2X/7/793e7f17298fe9e2b6b529dd26b419ddfd4509f2.jpeg",
         answers: ["Mathieu", "Mireille", "Windy", "Ta grand-mère"],
     },
-// Ewan a mis des images à partir d'ici
+    // Ewan a mis des images à partir d'ici
     {
         question: "Les doubitchous sont :",
         image: "",
-        answers: ["Roulés à la main sous les aisselles","Roulés sous les aisselles","Roulés avec les pieds","Roulé-boulé"],
+        answers: ["Roulés à la main sous les aisselles", "Roulés sous les aisselles", "Roulés avec les pieds", "Roulé-boulé"],
     },
 
     {
         question: "Que dit Olivier à la fin de chaque épisode de Sergent Pepper ?",
         image: "https://i.ytimg.com/vi/wbaPelv4swo/sddefault.jpg",
-        answers: ["This is the law","This is the job","This is the way","This is the flow"],
+        answers: ["This is the law", "This is the job", "This is the way", "This is the flow"],
     },
 
     {
-         question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
-         image: "",
-         answers: ["À  la fraise","Au nutella","Au jambon","Au pastis"],
+        question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
+        image: "",
+        answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
     },
 
     {
         question: "Le mur c'est...",
         image: "",
-        answers: ["Tous les jours","Toutes les semaines "," À chaque live Co"," Quand Kevin a la flemme d'expliquer"],
-   },
+        answers: ["Tous les jours", "Toutes les semaines ", " À chaque live Co", " Quand Kevin a la flemme d'expliquer"],
+    },
 
     {
         question: "Il s'appelle Juste Leblanc",
         image: "https://ds.static.rtbf.be/article/image/1920x1080/7/2/a/717d8b3d60d9eea997b35b02b6a4e867-1681812931.jpeg",
-        answers: ["Ah bon ? Il n'a pas de prénom ?","Ah bon ? Il est breton ?","Ah bon ? Il est en noir et blanc ?","Ah bon ? Il a juste un nom ?"],
-   },
-   
-   {
-    question: "Que pense Kim des marseillais à propos de la lune ?",
-    image: "https://s1.dmcdn.net/v/67Dhi1LPTWUJQAOEl/x1080",
-    answers: ["Qu'il y a 2 lunes","Que la lune n'existe pas","Qu'il y a des aliens sur la face cachée de la lune","Que la lune est au centre de l'univers"],
-   },
+        answers: ["Ah bon ? Il n'a pas de prénom ?", "Ah bon ? Il est breton ?", "Ah bon ? Il est en noir et blanc ?", "Ah bon ? Il a juste un nom ?"],
+    },
+
+    {
+        question: "Que pense Kim des marseillais à propos de la lune ?",
+        image: "https://s1.dmcdn.net/v/67Dhi1LPTWUJQAOEl/x1080",
+        answers: ["Qu'il y a 2 lunes", "Que la lune n'existe pas", "Qu'il y a des aliens sur la face cachée de la lune", "Que la lune est au centre de l'univers"],
+    },
 
 ]
 
@@ -110,4 +110,4 @@ score.textContent = userScore;
 
 const score2 = document.querySelector(".sur30");
 
-score2.textContent = `/${questions.length}` ;
+score2.textContent = `/${questions.length}`;
