@@ -1,4 +1,4 @@
-let userScore = (10 - parseInt(localStorage.getItem("score"))) || 10;
+let userScore = (10 - (parseInt(localStorage.getItem("score")) || 10));
 
 const score = document.querySelector(".variable");
 
