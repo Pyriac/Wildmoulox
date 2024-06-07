@@ -76,10 +76,11 @@ header svg {
     display: flex;
     transition: 0.2s;
     margin: 10px;
+    max-height: 2.5rem;
 }
 
 header svg:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
@@ -237,13 +238,13 @@ h2 {
     }
 
     .results {
-
+        display: flex;
         margin-top: 10svh;
-        min-height: 320px;
-        height: 25svh;
+        height: 320px;
         width: 55svw;
         max-width: 630px;
         border-radius: 2rem 2rem 2rem 2rem;
+        justify-content: center;
     }
 
     .mobile {
@@ -272,10 +273,9 @@ h2 {
     }
 
     .nombre-mauvaises-rep {
-        background: rgb(247, 127, 0);
         background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 80%);
-        width: 200px;
-        height: 200px;
+        width: 145px;
+        height: 145px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -320,6 +320,29 @@ h2 {
 
     /* END BODY RULES */
 
+}
+
+
+@media screen and (min-width:1441px) {
+
+    .results {
+        display: flex;
+        margin-top: 10svh;
+        height: 400px;
+        width: 55svw;
+        max-width: 630px;
+        border-radius: 2rem 2rem 2rem 2rem;
+        justify-content: center;
+    }
+
+    .nombre-mauvaises-rep {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(247, 127, 0, 1) 40%, rgba(189, 110, 26, 1) 90%);
+        width: 180px;
+        height: 180px;
+
+    }
 }
 
 /* END DESKTOP RULES */

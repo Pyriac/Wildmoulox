@@ -52,8 +52,8 @@ const questions = [
     },
     {
         question: "Après de nombreuses recherches scientifiques, le professeur Cyrielle a trouvé que la logique c'est :",
-        image: "https://avatars.githubusercontent.com/u/118595509?v=4",
-        imageAlt: "Portrait de Cyrielle",
+        image: "https://pyxis.nymag.com/v1/imgs/d6a/dc7/4a5001b7beea096457f480c8808572428b-09-roll-safe.rsquare.w400.jpg",
+        imageAlt: "un homme se touche le front pour signifier qu'il pense",
         answers: ["Logique", "Éclaté au sol", "Inutile", "La Lorraine"],
     },
     {
