@@ -106,25 +106,20 @@ const questions = [
     }
 ];
 
-// module.exports = questions;
 
-//creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");
 const answerValue = document.querySelector(".answer-value");
 
 let userScore = parseInt(localStorage.getItem("score")) || 0;
 let randomIndex = parseInt(localStorage.getItem("randomIndex"));
 const usedIndex = JSON.parse(localStorage.getItem("usedIndex")) || [];
-console.log(`Index actuel : ${randomIndex}`);
 
 usedIndex.push(randomIndex);
 localStorage.setItem("usedIndex", JSON.stringify(usedIndex));
-console.log(`Index utilisés : ${usedIndex}`);
 
 function quizz() {
     const rightAnswer = [];
     rightAnswer.push(questions[randomIndex].answers[0]);
-    console.log(`Bonne réponse : ${rightAnswer}`);
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -140,9 +135,7 @@ function quizz() {
     image.alt = questions[randomIndex].imageAlt;
 
     const shuffledAnswers = [...questions[randomIndex].answers];
-    console.log(`Réponses à la question actuelle : ${shuffledAnswers}`);
     shuffle(shuffledAnswers);
-    console.log(`Réponses à la question actuelle mélangées : ${shuffledAnswers}`);
 
     const showedAnswers = document.querySelectorAll(".reponse");
     shuffledAnswers.forEach((answer, index) => {
@@ -174,8 +167,6 @@ function quizz() {
         buttonNextPage.textContent = "QUESTION SUIVANTE";
     };
 
-
-    //opening answer bloc function
     clickedAnswer.forEach(reponse =>
         reponse.addEventListener("click", () => {
             answerPop = document.querySelector(".answer-pop");
@@ -183,9 +174,6 @@ function quizz() {
             const popupScore = document.querySelector(".popupScore");
             popupScore.textContent = `Vous avez ${userScore} point(s) !`;
         }));
-
-
-
 
 };
 
