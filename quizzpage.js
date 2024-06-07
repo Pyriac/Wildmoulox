@@ -25,14 +25,14 @@ const questions = [
         question: "Top ! Située entre l’Europe, le Caucase et l’Anatolie. Je suis principalement alimentée par le Danube, le Dniepr et le Don je suis je suis je suis :",
         image: "https://static.actu.fr/uploads/2018/03/Julien-Lepers-Question-pour-un-champion.jpg",
         imageAlt: "Julien Leppers entrain de présenter question pour un champion",
-        answers: ["La mer Noire", "La mer égée", "La mer méditérannée", "La mer Rouge"],
+        answers: ["La mer Noire", "La mer Égée", "La mer Méditérannée", "La mer Rouge"],
 
     },
     {
         question: "Vous êtes Odile Deray ?",
         image: "https://www.serieously.com/app/uploads/2022/07/la-cite-de-la-peur-odile-aeroport.jpg",
         imageAlt: "Odile Deray à l'aéroport dans La cité de la peur",
-        answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenceur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
+        answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenseur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
 
     },
     {
@@ -78,8 +78,13 @@ const questions = [
     },
 
     {
+<<<<<<< HEAD
         question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
         image: "https://www.premiere.fr/sites/default/files/styles/scale_crop_480x270/public/2018-04/rrrrrrr_2003_7.jpg",
+=======
+        question: `À quoi est le sandwich que propose Pierre en échange de la dénonciation du "meurtrieur" dans le film ''RRRrrrr!!!'' ?`,
+        image: "https://cdn.discordapp.com/attachments/1243225688929206404/1248181621031698493/le-sandwich-a-la-fraise.png?ex=6662bb38&is=666169b8&hm=c5df9c3f819e3b91ca3570fcdac036440984435e2d2be5cadef1cd184f7afb7e&",
+>>>>>>> 31861346b266ab4dc7cbd6a4cae63576e4118f96
         imageAlt: "Pierre de RRRRrrrr propose un sandwich au chef",
         answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
     },
@@ -106,25 +111,20 @@ const questions = [
     }
 ];
 
-// module.exports = questions;
 
-//creating calling const
 const clickedAnswer = document.querySelectorAll(".reponse");
 const answerValue = document.querySelector(".answer-value");
 
 let userScore = parseInt(localStorage.getItem("score")) || 0;
 let randomIndex = parseInt(localStorage.getItem("randomIndex"));
 const usedIndex = JSON.parse(localStorage.getItem("usedIndex")) || [];
-console.log(`Index actuel : ${randomIndex}`);
 
 usedIndex.push(randomIndex);
 localStorage.setItem("usedIndex", JSON.stringify(usedIndex));
-console.log(`Index utilisés : ${usedIndex}`);
 
 function quizz() {
     const rightAnswer = [];
     rightAnswer.push(questions[randomIndex].answers[0]);
-    console.log(`Bonne réponse : ${rightAnswer}`);
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -140,9 +140,7 @@ function quizz() {
     image.alt = questions[randomIndex].imageAlt;
 
     const shuffledAnswers = [...questions[randomIndex].answers];
-    console.log(`Réponses à la question actuelle : ${shuffledAnswers}`);
     shuffle(shuffledAnswers);
-    console.log(`Réponses à la question actuelle mélangées : ${shuffledAnswers}`);
 
     const showedAnswers = document.querySelectorAll(".reponse");
     shuffledAnswers.forEach((answer, index) => {
@@ -174,8 +172,6 @@ function quizz() {
         buttonNextPage.textContent = "QUESTION SUIVANTE";
     };
 
-
-    //opening answer bloc function
     clickedAnswer.forEach(reponse =>
         reponse.addEventListener("click", () => {
             answerPop = document.querySelector(".answer-pop");
@@ -183,9 +179,6 @@ function quizz() {
             const popupScore = document.querySelector(".popupScore");
             popupScore.textContent = `Vous avez ${userScore} point(s) !`;
         }));
-
-
-
 
 };
 
