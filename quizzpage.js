@@ -79,7 +79,7 @@ const questions = [
 
     {
         question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
-        image: "https://cdn.discordapp.com/attachments/1243225688929206404/1248181621031698493/le-sandwich-a-la-fraise.png?ex=6662bb38&is=666169b8&hm=c5df9c3f819e3b91ca3570fcdac036440984435e2d2be5cadef1cd184f7afb7e&",
+        image: "https://www.premiere.fr/sites/default/files/styles/scale_crop_480x270/public/2018-04/rrrrrrr_2003_7.jpg",
         imageAlt: "Pierre de RRRRrrrr propose un sandwich au chef",
         answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
     },
