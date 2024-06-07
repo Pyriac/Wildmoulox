@@ -25,14 +25,14 @@ const questions = [
         question: "Top ! Située entre l’Europe, le Caucase et l’Anatolie. Je suis principalement alimentée par le Danube, le Dniepr et le Don je suis je suis je suis :",
         image: "https://static.actu.fr/uploads/2018/03/Julien-Lepers-Question-pour-un-champion.jpg",
         imageAlt: "Julien Leppers entrain de présenter question pour un champion",
-        answers: ["La mer Noire", "La mer égée", "La mer méditérannée", "La mer Rouge"],
+        answers: ["La mer Noire", "La mer Égée", "La mer Méditérannée", "La mer Rouge"],
 
     },
     {
         question: "Vous êtes Odile Deray ?",
         image: "https://www.serieously.com/app/uploads/2022/07/la-cite-de-la-peur-odile-aeroport.jpg",
         imageAlt: "Odile Deray à l'aéroport dans La cité de la peur",
-        answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenceur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
+        answers: ["Non je suis le pape et j'attends ma soeur ", "Non je suis à gauche de l'ascenseur ", "Non je suis Michel Polnareff et j'attends mon coiffeur", "Non je suis Crocodile Dundee"],
 
     },
     {
@@ -78,7 +78,7 @@ const questions = [
     },
 
     {
-        question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
+        question: `À quoi est le sandwich que propose Pierre en échange de la dénonciation du "meurtrieur" dans le film ''RRRrrrr!!!'' ?`,
         image: "https://cdn.discordapp.com/attachments/1243225688929206404/1248181621031698493/le-sandwich-a-la-fraise.png?ex=6662bb38&is=666169b8&hm=c5df9c3f819e3b91ca3570fcdac036440984435e2d2be5cadef1cd184f7afb7e&",
         imageAlt: "Pierre de RRRRrrrr propose un sandwich au chef",
         answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
