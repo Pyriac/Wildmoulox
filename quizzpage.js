@@ -78,7 +78,7 @@ const questions = [
     },
 
     {
-        question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du meurtieur dans le film ''RRRrrrr!!!'' ?",
+        question: "À quoi est le sandwich que propose Pierre en échange de la dénonciation du ''meurtrieur'' dans le film ''RRRrrrr!!!'' ?",
         image: "https://www.premiere.fr/sites/default/files/styles/scale_crop_480x270/public/2018-04/rrrrrrr_2003_7.jpg",
         imageAlt: "Pierre de RRRRrrrr propose un sandwich au chef",
         answers: ["À  la fraise", "Au nutella", "Au jambon", "Au pastis"],
